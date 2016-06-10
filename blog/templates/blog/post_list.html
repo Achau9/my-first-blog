@@ -31,12 +31,22 @@
 								{% endif %}
 								
 								<p>{{ post.text|linebreaks }}</p>
-								<form method='get' action='#'>
-									<input type="submit" value="Next" name="Next"/>
-								</form>
-								<p>present</p>
-								<a class="btn btn-default" href="{% url 'button_clicked' %}"><span class="glyphicon glyphicon-check"></span></a>
-								<a class="btn btn-default" href=><span class="glyphicon glyphicon-minus-sign"></span></a>
+								<p id="demo"></p>
+								<button onclick="present()"><span class="glyphicon glyphicon-check"></span></button>
+								<button onclick="absent()"><span class="glyphicon glyphicon-minus-sign"></span></button>
+								
+
+								
+
+								<script>
+								function present() {
+									document.getElementById("demo").innerHTML = "Present";
+								}
+								function absent() {
+									document.getElementById("demo").innerHTML = "Absent";
+								}
+								</script>  
+								
 							</div>
 						
 						
